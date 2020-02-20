@@ -12,6 +12,7 @@ import sun.example.com.myapplication.ui.contract.MainContract
 import sun.example.com.myapplication.ui.presenter.MainPresenter
 import sun.example.com.myapplication.utils.ComponentUtils
 import sun.example.com.myapplication.utils.LogUtils
+import sun.example.com.myapplication.utils.StatusBarUtils
 
 class MainActivity : MvpBaseActivity<MainActivity, MainPresenter>(), MainContract.IView {
 
@@ -25,6 +26,8 @@ class MainActivity : MvpBaseActivity<MainActivity, MainPresenter>(), MainContrac
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        StatusBarUtils.setColor(this, resources.getColor(R.color.base_color_white), 0)
+        StatusBarUtils.setStatusTextGray(this)
     }
 
     override fun getLayoutId(): Int {

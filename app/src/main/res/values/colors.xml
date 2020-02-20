@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
 
+    <color name="base_color_white">#FFFFFF</color>
     <color name="base_color_yellow">#FFEB3B</color>
     <color name="base_color_green">#9CCC65</color>
     <color name="base_color_blue">#03A9F4</color>
