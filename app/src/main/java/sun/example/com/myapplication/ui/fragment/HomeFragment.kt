@@ -1,6 +1,7 @@
 package sun.example.com.myapplication.ui.fragment
 
 import sun.example.com.myapplication.R
+import sun.example.com.myapplication.bean.wallpaper.WallpaperInfo
 import sun.example.com.myapplication.ui.base.MvpBaseFragment
 import sun.example.com.myapplication.ui.contract.HomeContract
 import sun.example.com.myapplication.ui.presenter.HomePresenter
@@ -16,7 +17,7 @@ class HomeFragment : MvpBaseFragment<HomeFragment, HomePresenter>(), HomeContrac
     override fun getLayoutId(): Int = R.layout.fragment_home
 
     override fun initData() {
-        mPresenter.loadHomeInfo()
+        mPresenter.loadWallpaperInfo()
     }
 
     override fun initViews() {
@@ -26,8 +27,8 @@ class HomeFragment : MvpBaseFragment<HomeFragment, HomePresenter>(), HomeContrac
         ComponentUtils.getFragmentComponent().inject(this)
     }
 
-    override fun onHomeInfoLoad() {
-        LogUtils.d<HomeFragment>("onHomeInfoLoad")
+    override fun onWallpaperInfoLoad(info: WallpaperInfo) {
+        LogUtils.d<HomeFragment>("onWallpaperInfoLoad info = $info")
     }
 
 }

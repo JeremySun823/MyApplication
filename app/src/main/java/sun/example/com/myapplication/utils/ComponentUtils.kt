@@ -18,4 +18,8 @@ object ComponentUtils {
     fun getFragmentComponent(): FragmentComponent {
         return DaggerFragmentComponent.builder().build()
     }
+
+    fun getApiComponent(): ApiComponent {
+        return DaggerApiComponent.builder().build()
+    }
 }
